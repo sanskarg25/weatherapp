@@ -9,7 +9,7 @@ from weather1.pagination import CustomPageNumberPagination
 def index(request):
     cities = City.objects.all()
 
-    url = 'http://api.openweathermap.org/data/2.5/weather?q={}&units=imperial&appid=949e79f8939cf0d66eac2a1630133f2a'
+    url = 'http://api.openweathermap.org/data/2.5/weather?q={}&units=imperial&appid=YOUR_API_KEY'
 
     if request.method == 'POST':
         form = CityForm(request.POST)
